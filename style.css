@@ -43,6 +43,7 @@ body {
 
 .messages {
   padding-top: 80px;
+  padding-bottom:120px;
   display: flex;
   flex-direction: column;
   gap: 50px;
