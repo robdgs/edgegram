@@ -1,0 +1,198 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #292656;
+}
+
+.friends {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background: #292656;
+}
+
+.friends img {
+  width: 35px;
+  padding: 10px;
+  background: white;
+  border-radius: 100%;
+}
+
+.friendCard {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 150px;
+  padding: 20px 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  background: #e2daf3;
+  border-radius: 60px;
+}
+
+.messages {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  background: #c4b2ea;
+}
+
+.add-new-message-btn {
+  border-radius: 20px;
+  border: none;
+  background-color: #e2daf3;
+}
+
+.add-new-message {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+  padding: 20px;
+}
+
+.input-text {
+  border: none;
+  background-color: #e2daf3;
+  height: 55px;
+}
+.input-sender {
+  border: none;
+  background-color: #e2daf3;
+}
+
+.filter-input {
+  margin: 0 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #e2daf3;
+}
+
+.messageCard {
+  display: flex;
+  flex-direction: column;
+  border: 2px;
+  border-style: rgba(0, 0, 0, 0.221);
+  padding: 0 20px;
+  border-radius: 25px;
+  background-color: #e2daf3;
+}
+
+.messages-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .friends {
+    width: 25%;
+  }
+
+  .messages {
+    width: 33%;
+    flex-grow: 1;
+  }
+
+  .empty {
+    width: 25%;
+  }
+}
+#header {
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 12px;
+}
+
+header nav {
+  width: 100%;
+  height: 10vh;
+  background-color: #534f93;
+  display: grid;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-bottom: 10px;
+}
+.edge {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 45px;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+.waviy {
+  margin-top: 45px;
+  margin-bottom: 30px;
+  font-weight: 900;
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+.messageCard:hover {
+  background-color: rgb(170, 92, 170);
+}
+
+.messageCard:active {
+  box-shadow: inset 0 0 16px white;
+}
+
+.messageCard:active:after {
+  content: "DELETE";
+  font-size: 1rem;
+  font-weight: bold;
+  transform: translateX(235px) translateY(-140px);
+  opacity: 0.5;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #534f93;
+  color: white;
+  text-align: center;
+}
